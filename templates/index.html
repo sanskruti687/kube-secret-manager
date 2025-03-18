@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <h2>Internship Application Form</h2>
-        <form id="internshipForm" action="/submit" method="POST" enctype="multipart/form-data">
+        <form id="internshipForm" action="/submit" method="POST">
             
             <label for="full_name">Full Name:</label>
             <input type="text" id="full_name" name="full_name" required>
@@ -32,11 +32,13 @@
             <label for="department">Department:</label>
             <input type="text" id="department" name="department" required>
 
-            <label for="resume">Upload Resume (PDF):</label>
-            <input type="file" id="resume" name="resume" accept=".pdf" required>
-
             <button type="submit">Submit Application</button>
         </form>
+
+        <!-- Success Message -->
+        <p id="successMessage" class="success-message" style="display: none;">
+            ✅ Submitted Successfully!
+        </p>
     </div>
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>

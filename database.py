@@ -7,3 +7,4 @@ def connect_db():
         password="Sanskruti@123",
         database="internship_db"
     )
+
